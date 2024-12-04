@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tests\App\Functional;
 
-use App\Domain\Deposit\Command\MakeDeposit;
-use App\Domain\MerchantTransaction\Command\CompleteTransaction;
-use App\Domain\MerchantTransaction\Command\StartTransaction;
-use App\Domain\MerchantTransaction\Event\TransactionCompleted;
-use App\Domain\MerchantTransaction\Event\TransactionStarted;
-use App\Domain\User\Command\RegisterUser;
+use App\Domain\Finance\Deposit\Command\MakeDeposit;
+use App\Domain\Finance\MerchantTransaction\Command\CompleteTransaction;
+use App\Domain\Finance\MerchantTransaction\Command\StartTransaction;
+use App\Domain\Finance\MerchantTransaction\Event\TransactionCompleted;
+use App\Domain\Finance\MerchantTransaction\Event\TransactionStarted;
+use App\Domain\Account\User\Command\RegisterUser;
 use App\Infrastructure\UuidConverter;
-use App\Projection\BalanceProjection;
-use App\Projection\UserProjection;
+use App\Projection\Finance\BalanceProjection;
+use App\Projection\Account\UserProjection;
 use Ecotone\Lite\EcotoneLite;
 use Ecotone\Messaging\Config\ServiceConfiguration;
 use PHPUnit\Framework\Attributes\Test;

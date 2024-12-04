@@ -1,10 +1,10 @@
 <?php
 
-use App\Domain\Deposit\Command\MakeDeposit;
-use App\Domain\MerchantTransaction\Command\CompleteTransaction;
-use App\Domain\MerchantTransaction\Command\StartTransaction;
-use App\Domain\User\Command\ChangeUserName;
-use App\Domain\User\Command\RegisterUser;
+use App\Domain\Finance\Deposit\Command\MakeDeposit;
+use App\Domain\Finance\MerchantTransaction\Command\CompleteTransaction;
+use App\Domain\Finance\MerchantTransaction\Command\StartTransaction;
+use App\Domain\Account\User\Command\ChangeUserName;
+use App\Domain\Account\User\Command\RegisterUser;
 use Ecotone\Dbal\DbalConnection;
 use Ecotone\Lite\EcotoneLiteApplication;
 use Enqueue\Dbal\DbalConnectionFactory;
